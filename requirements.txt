@@ -1,0 +1,4 @@
+Flask
+flask-bootstrap
+flask_flatpages
+Frozen-Flask

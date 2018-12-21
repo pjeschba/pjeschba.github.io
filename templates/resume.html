@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Here's some info about how to get in touch!{% endblock %}</h1>
+{% endblock %}
+
+{% block body %}
+  {{ super() }}
+  <div class="container">
+    <div class="jumbotron text-center">
+      <embed src="/static/resume.pdf" type="application/pdf" width="725px" height="994px" />
+    </div>
+  </div>
+
+{% endblock %}
