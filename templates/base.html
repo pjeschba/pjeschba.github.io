@@ -1,0 +1,38 @@
+{% extends "bootstrap/base.html" %}
+
+{% block styles %}
+  {{ super() }}
+  <!-- add after bootstrap.min.css -->
+  <link rel="stylesheet" href="https://cdn.rawgit.com/afeld/bootstrap-toc/v0.4.1/dist/bootstrap-toc.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+{% endblock %}
+
+{% block navbar %}
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <ul class="nav navbar-nav">
+        <li><a href="/">About Me</a></li>
+        <li><a href="/contact/">Contact</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="" role="button">Resume <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="/resume/"> View </a></li>
+            <li>
+              <a href= "/static/resume.pdf" download>
+                Download<i class="fas fa-file-download fa-fw"></i>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+{% endblock %}
+
+{% block scripts %}
+  {{ super () }}
+  <!-- add after bootstrap.min.js -->
+  <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v0.4.1/dist/bootstrap-toc.min.js"></script>
+{% endblock %}

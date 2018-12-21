@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block body_attribs %}
+  data-spy="scroll" 
+  data-target="#toc"
+{% endblock %}
+
+{% block content %}
+  <div class="row">
+    <div class="col-md-3 text-center">
+      <img src="static/images/avatar.jpeg" alt="Picture of me!"
+      class="img-circle" style=padding-bottom:30px>
+      <nav id="toc" data-spy="affix" data-toggle="toc" style="position:relative;"></nav>
+    </div>
+    <div class="col-md-9">
+      <p> We're so happy you're finally here! </p>
+      <ul>
+        {% for page in pages %}
+          <li>
+            <a href="{{ url_for("page", path=page.path)
+            }}">{{ page.title }}</a>
+          </li>
+        {% else %}
+          <li>No pages to display.</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+{% endblock %}
