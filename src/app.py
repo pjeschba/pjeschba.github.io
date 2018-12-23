@@ -2,8 +2,6 @@ from flask import Flask, render_template
 from flask_bootstrap import Bootstrap
 from flask_flatpages import FlatPages
 
-FLATPAGES_EXTENSION = '.md'
-
 app = Flask(__name__)
 Bootstrap(app)
 app.config.from_pyfile('settings.py')
