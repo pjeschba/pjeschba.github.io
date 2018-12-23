@@ -1,5 +1,10 @@
 {% extends 'base.html' %}
 
+{% block head %}
+  {{ super() }}
+  <title> Contact </title>
+{% endblock %}
+
 {% block header %}
   <h1>{% block title %}Here's some info about how to get in touch!{% endblock %}</h1>
 {% endblock %}
