@@ -27,3 +27,8 @@ def resume():
 def page(path):
     page = pages.get_or_404(path)
     return render_template('page.html', page=page)
+
+
+if __name__ == '__main__':
+    app.jinja_env.auto_reload = True
+    app.run(debug=True)

@@ -8,6 +8,7 @@ def parent_dir(path):
 
 
 DEBUG = True
+TEMPLATES_AUTO_RELOAD = True
 APP_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_ROOT = parent_dir(APP_DIR)
 

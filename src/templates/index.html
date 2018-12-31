@@ -19,12 +19,22 @@
     </div>
     <div class="col-md-9">
       <h1> Intro </h1>
-      <p> Hi! I'm a recent University of Michigan grad currently working as a Software Engineer in Seattle.</p>
+      <p>Hi! I'm a recent University of Michigan grad currently working as a
+      Software Engineer in Seattle. I created this page to solidify a few web
+      dev basics, namely, how to create a static page, style it with a CSS
+      framework like Bootstrap, and host it somewhere on my own domain! 
+      I'm also hoping to write on here about topics that are interesting to me.
+      This will probably include things like music/book reviews,
+      Dominion (a card game I like playing) strategy articles, and maybe even
+      some tech related stuff, too!</p>
+
+      <p> If you want to get in touch with me for any reason, my email and
+      contact info on a few sites I frequent is under the "Contact" tab. </p>
       <h1> Pages </h1> 
       <ul>
         {% for page in pages %}
           <li>
-            <a href="{{ url_for("page", path=page.path) }}">{{ page.title }}</a>
+            <a href="{{ url_for("page", path=page.path) }}"> {{ page.title }} </a>
           </li>
         {% else %}
           <li>No pages to display.</li>
